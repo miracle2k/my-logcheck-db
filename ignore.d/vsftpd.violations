@@ -1,2 +1,2 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ vsftpd: \(pam_unix\) authentication failure; logname= uid=0 euid=0 tty=ftp ruser=[^ ]+ rhost=[0-9a-f.:]{3,39}$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ vsftpd: \(pam_unix\) check pass; user unknown$
+vsftpd
