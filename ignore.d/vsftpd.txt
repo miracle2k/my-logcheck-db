@@ -1,0 +1,2 @@
+Feb 28 10:32:11 kosmo vsftpd: (pam_unix) authentication failure; logname= uid=0 euid=0 tty=ftp ruser=www rhost=203.109.16.72
+Feb 28 11:01:40 kosmo vsftpd: (pam_unix) check pass; user unknown
