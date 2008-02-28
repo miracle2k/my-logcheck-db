@@ -1,1 +1,2 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: auth-worker\([-_.[:alnum:]]+\): (pg|my)sql: Connected to [-_.[:alnum:]]+ \([_[:alnum:]]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity| in IDLE)?$
