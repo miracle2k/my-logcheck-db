@@ -1,0 +1,1 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: auth-worker\([-_.[:alnum:]]+\): (pg|my)sql: Connected to [-_.[:alnum:]]+ \([_[:alnum:]]+\)$
