@@ -5,3 +5,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: warning: no MX host for [^[:space:]]+ has a valid address record$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: [[:upper:]0-9]+: host [^[:space:]]+ said: [45][0-9][0-9]( |-).* \(in reply to (HELO|EHLO|MAIL FROM|RCPT TO|(end of )?DATA) command\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd\[[0-9]+\]: timeout after (HELO|EHLO|MAIL|RCPT|DATA|RSET|CONNECT|NOOP|END-OF-MESSAGE) from [^[:space:]]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: valid_hostname: invalid character [0-9]+\(decimal\): .*$
