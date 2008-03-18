@@ -6,3 +6,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: [[:upper:]0-9]+: host [^[:space:]]+ said: [45][0-9][0-9]( |-).* \(in reply to (HELO|EHLO|MAIL FROM|RCPT TO|(end of )?DATA) command\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd\[[0-9]+\]: timeout after (HELO|EHLO|MAIL|RCPT|DATA|RSET|CONNECT|NOOP|END-OF-MESSAGE) from [^[:space:]]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: valid_hostname: invalid character [0-9]+\(decimal\): .*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/(cleanup|smtp)\[[0-9]+\]: [[:xdigit:]]+: to=<[^[:space:]]+>, relay=[^[:space:]]+\](:\d+)?,( conn_use=[0-9]+,)? delay=[0-9.]+,( delays=[0-9./]+,)?( dsn=[45]\.[0-9]\.[0-9],)? status=(bounced|deferred) \(.+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: [[:upper:]0-9]+: lost connection with [^[:space:]]+ while sending (DATA|MAIL FROM|RCPT TO)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: [[:upper:]0-9]+: conversation with [._[:alnum:]-]+\[[0-9a-f.:]{3,39}\] timed out while (receiving the initial server greeting|performing the EHLO handshake)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd\[[0-9]+\]: too many errors after [[:upper:]]+ from [._[:alnum:]-]+\[[.[:digit:]]+\]$
