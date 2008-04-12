@@ -1,0 +1,2 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: TCP: too many of orphaned sockets$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: Out of socket memory$
