@@ -2,8 +2,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts\): rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
 
 # Originals are missing the bytes= info at the end.
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Connection closed(: Connection reset by peer)?( bytes=[\d\/]+)?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity|: Disconnected| in [[:upper:]]+)?( bytes=[\d\/]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Connection closed(: Connection reset by peer)?( bytes=[0-9\/]+)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity|: Disconnected| in [[:upper:]]+)?( bytes=[0-9\/]+)?$
 
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: auth-worker\([-_.[:alnum:]]+\): (pg|my)sql: Connected to [-_.[:alnum:]]+ \([_[:alnum:]]+\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Disconnected(: Logged out| for inactivity| in IDLE)?$
