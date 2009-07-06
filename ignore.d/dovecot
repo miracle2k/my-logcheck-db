@@ -1,5 +1,5 @@
-# Connections by Nagios.
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: Aborted login \(no auth attempts\): rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured))?$
+# Builtin rule matching some, but missing a number of variations.
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: (pop3|imap)-login: (Disconnected|Aborted login) \(no auth attempts\): rip=[.:[:xdigit:]]+, lip=[.:[:xdigit:]]+(, (TLS( handshake)?|secured|TLS.*))?$
 
 # Originals are missing the bytes= info at the end.
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ dovecot: IMAP\([-_.@[:alnum:]]+\): Connection closed(: Connection reset by peer)?( bytes=[0-9\/]+)?$
