@@ -1,0 +1,2 @@
+# Debian lenny seems to generate this in a way not captured by it's own rules.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ([[:alnum:]]+\[[0-9]+\])?: pam_[[:alnum:]]+\([[:alnum:]:]*\): session (closed|opened) for user [.[:alnum:]-]+( by (root|LOGIN)?\(uid=0\))?$
