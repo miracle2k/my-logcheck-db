@@ -1,0 +1,3 @@
+# Original in Ubuntu Jaunty was only matching numerics after '#', and required the 'remote reception' bracket.
+# However, the normal syslog rotation cronjob in cron.daily triggers these messages without that bracket.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ syslogd [.0-9]{5}#[[:alnum:]]+: restart(?: \(remote reception\))?\.$
