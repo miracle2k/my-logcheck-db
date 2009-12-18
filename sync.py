@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from os import walk, symlink as ln
 from os.path import dirname, join, normpath as np, exists, islink, abspath
 
