@@ -13,18 +13,17 @@ def install_dir(source_dir, target_dir):
         for filename in files:
             s = np(join(source_dir, filename))
             t = np(join(target_dir, 'local-%s'%filename))
-            print "linking %s:" % t,
 
-            if islink(t):
-                print "exists, skipping."
-            elif exists(t):
-                print "ERROR, THE PATH ALREADY EXISTS!!"
+            if exists(t):                
+                print "%8s %s" % ("[exists]", t)
+                if not islink(t):
+                    print "%s%s" % (" "*9, "Cannot override the file at this location.")
             else:
                 # TODO: it would be much nicer we we could create
                 # a proper relative link. It should be able to handle
                 # two arbitrary paths though.
                 ln(np(abspath(s)), t)
-                print "ok."
+                print "%8s %s" % ("[mklink]", t)
 
 
 # install system level rules
