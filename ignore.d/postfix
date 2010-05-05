@@ -1,3 +1,6 @@
+# Original did not include the "(0 bytes") part.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd\[[0-9]+\]: too many errors after [[:upper:]]+ \([0-9]+ bytes\) from [._[:alnum:]-]+\[[.[:digit:]]+\]$
+
 # Port num apparently now given as part of target host name, so making it optional.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: connect to [^[:space:]]+ No route to host( \(port 25\))?$
 
