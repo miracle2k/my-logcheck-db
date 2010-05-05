@@ -10,6 +10,12 @@
 # Original requires the port number.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: connect to [^[:space:]]+ Network is unreachable( \(port 25\))?$
 
+# No comparable message found in orignal rules.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: ([-._[:alnum:]]+): non-ESMTP response from [^[:space:]]+.*$
+
+# For now, ignore this message only for specific hosts that seem broken.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: to prevent loss of mail, turn off command pipelining for (91\.192\.32\.10) with the smtp_discard_ehlo_keyword_address_maps parameter$
+
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/[ls]mtp\[[0-9]+\]: [[:upper:]0-9]+: to=<[^[:space:]]+>(, orig_to=<[^[:space:]]+>)?, relay=[._[:alnum:]-]+\[[0-9.]{7,15}\](:[[:digit:]]{1,5})?, (conn_use=[[:digit:]]+, )?delay=[.0-9]+(, delays=([.0-9]+/){3}[.0-9]+)?(, dsn=[45](\.[0-9]+){2})?, status=(deferred|bounced|undeliverable) \(host [._[:alnum:]-]+\[[0-9.]{7,15}\] said: [45][0-9][0-9]( |-).+ \(in reply to (HELO|EHLO|MAIL FROM|RCPT TO|DATA|end of DATA) command\)\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/(qmgr|smtp|cleanup)\[[0-9]+\]: [[:xdigit:]]+: to=<[^[:space:]]+>(, orig_to=<[^[:space:]]+>)?, relay=(none|[^[:space:]]+\])(:\d+)?,( conn_use=[0-9]+,)? delay=[0-9.]+,( delays=[0-9./]+,)?( dsn=[45]\.[0-9]\.[0-9],)? status=(bounced|deferred) \(.+\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/(qmgr|smtp|cleanup)\[[0-9]+\]: [[:xdigit:]]+: to=<[^[:space:]]+>(, orig_to=<[^[:space:]]+>)?, relay=[^[:space:]]+\](:\d+)?,( conn_use=[0-9]+,)? delay=[0-9.]+,( delays=[0-9./]+,)?( dsn=[45]\.[0-9]\.[0-9],)? status=(bounced|deferred) \(.+\)$
