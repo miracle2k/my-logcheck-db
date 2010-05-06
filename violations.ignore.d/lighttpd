@@ -1,0 +1,3 @@
+# /etc/cron.daily/lighttpd (Jaunty) causes those. There is a rule in ignore.d.server/logcheck to catch (apparently) the output of the logcheck cron script that catches a quite similar string, though has some differences wrt to the pam_unix/su:session part.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ([[:alnum:]]+\[[0-9]+\])?: pam_[[:alnum:]]+\(su:session\): session opened for user [.[:alnum:]-]+ by (root|LOGIN)?\(uid=0\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ([[:alnum:]]+\[[0-9]+\])?: pam_[[:alnum:]]+\(su:session\): session closed for user [.[:alnum:]-]+$
