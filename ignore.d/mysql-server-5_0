@@ -1,0 +1,14 @@
+# Those are logged every time the mysql slave server is halted and restarted
+# during backups.
+mysqld\[[0-9]+\]: .*Slave I/O thread killed while reading event$
+mysqld\[[0-9]+\]: .*Slave I/O thread exiting, read up to log
+mysqld\[[0-9]+\]: .*Error reading relay log event: slave SQL thread was killed$
+mysqld\[[0-9]+\]: .*Slave SQL thread initialized, starting replication in log
+mysqld\[[0-9]+\]: .*Slave I/O thread: connected to master .* replication started in log
+/etc/mysql/debian-start\[[0-9]+\]: Upgrading MySQL tables if necessary.$
+/etc/mysql/debian-start\[[0-9]+\]: Looking for 'mysql' as: /usr/bin/mysql$
+/etc/mysql/debian-start\[[0-9]+\]: Looking for 'mysqlcheck' as: /usr/bin/mysqlcheck$
+/etc/mysql/debian-start\[[0-9]+\]: This installation of MySQL is already upgraded to 5.0.75, use --force if you still need to run mysql_upgrade$
+/etc/mysql/debian-start\[[0-9]+\]: Checking for insecure root accounts.$
+/etc/mysql/debian-start\[[0-9]+\]: Triggering myisam-recover for all MyISAM tables$
+
