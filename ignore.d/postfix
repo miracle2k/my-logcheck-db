@@ -16,6 +16,9 @@
 # No comparable message found in orignal rules.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: ([-._[:alnum:]]+): non-ESMTP response from [^[:space:]]+.*$
 
+# This specific message not included in original ruleset.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtp\[[0-9]+\]: connect to [^[:space:]]+ Host is down$
+
 # For now, ignore this message only for specific hosts that seem broken.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ postfix/smtpd?\[[0-9]+\]: warning: to prevent loss of mail, turn off command pipelining for (91\.192\.32\.10) with the smtp_discard_ehlo_keyword_address_maps parameter$
 
