@@ -1,0 +1,3 @@
+# We see this logged via PHP, but according to Google, can
+# appear through other apps as well.
+: gethostby\*\.getanswer: asked for .*, got type 
