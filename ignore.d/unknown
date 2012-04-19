@@ -1,3 +1,5 @@
 # We see this logged via PHP, but according to Google, can
 # appear through other apps as well.
 : gethostby\*\.getanswer: asked for .*, got type 
+
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ php: getaddrinfo\*.gaih_getanswer: got type "DNAME"
